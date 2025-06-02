@@ -46,14 +46,14 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
 void detectaSensores() {
   dhtPresente = true;
   Serial.println("Sensor DHT22 detectado.");
-  
+
   if (digitalRead(PIN_ID_GAS) == LOW) {
     gasPresente = true;
     Serial.println("Sensor de Gás detectado.");
   }
 
   if (digitalRead(PIN_ID_LDR) == LOW) {
-    ldrPresente = true;
+    gasPresente = true;
     Serial.println("Sensor de LDR detectado.");
   }
 }
@@ -72,7 +72,7 @@ void inicializaPinos() {
   pinMode(PIN_ID_GAS, INPUT_PULLUP);
   pinMode(PIN_ID_LDR, INPUT_PULLUP);
   pinMode(PIN_GAS, INPUT);
-  pinMode(PIN_LDR, INPUT);  // Inicializa o pino do LDR
+  pinMode(PIN_LDR, INPUT); 
 }
 
 int leituraLDR() {
