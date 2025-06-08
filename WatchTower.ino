@@ -108,7 +108,7 @@ String montaJsonLeituras() {
 void enviaLeiturasWebSocket() {
   String json = montaJsonLeituras();
   Serial.println("Json: " + String(json));
-  // webSocket.sendTXT(json);
+  webSocket.sendTXT(json);
 }
 
 void setup() {
@@ -118,9 +118,9 @@ void setup() {
   conectaWiFi();
   detectaSensores();
   
-  // webSocket.begin(websocket_server_host, websocket_server_port, websocket_path);
-  // webSocket.onEvent(webSocketEvent);
-  // webSocket.setReconnectInterval(5000);
+  webSocket.begin(websocket_server_host, websocket_server_port, websocket_path);
+  webSocket.onEvent(webSocketEvent);
+  webSocket.setReconnectInterval(5000);
 }
 
 void loop() {
