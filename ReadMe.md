@@ -28,6 +28,7 @@ Outros sensores podem ser integrados conforme a necessidade regional (ex: chuvas
 
 ## Link do Video
 
+https://youtu.be/Kl_8YtfbcMA
 
 ## 📸 Diagrama do Projeto
 
